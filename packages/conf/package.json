@@ -8,5 +8,8 @@
 	"contributors": [
 		"Nat Sepruko <natsepruko@gmail.com>"
 	],
-	"license": "BSD-3-Clause"
+	"license": "BSD-3-Clause",
+	"devDependencies": {
+		"typescript": "^4.9.5"
+	}
 }
