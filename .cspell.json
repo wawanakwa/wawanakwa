@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+	"version": "0.2",
+	"name": "wawanakwa",
+	"language": "en_US",
+	"description": "cSpell configuration file for the wawanakwa monorepo.",
+	"dictionaries": ["typescript", "wawanakwa"],
+	"dictionaryDefinitions": [
+		{
+			"name": "wawanakwa",
+			"path": "./.cspell/wawanakwa.txt",
+			"addWords": true
+		}
+	],
+	"minWordLength": 4
+}

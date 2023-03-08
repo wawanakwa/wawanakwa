@@ -1,0 +1,12 @@
+{
+	"name": "@wawanakwa/conf",
+	"version": "1.0.0",
+	"description": "A configuration package for the wawanakwa monorepo.",
+	"keywords": [
+		"configuration"
+	],
+	"contributors": [
+		"Nat Sepruko <natsepruko@gmail.com>"
+	],
+	"license": "BSD-3-Clause"
+}

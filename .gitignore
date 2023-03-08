@@ -1,0 +1,15 @@
+# Node.js
+**/node_modules/
+
+# Logging
+*.log
+
+# Turbo
+.turbo
+
+# Builds
+**/build/
+**/dist/
+
+# MacOS
+.DS_Store
