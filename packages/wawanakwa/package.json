@@ -2,6 +2,14 @@
 	"name": "wawanakwa",
 	"version": "0.0.1-alpha.1",
 	"description": "A Discord framework aimed at TypeScript.",
+	"keywords": [
+		"discord",
+		"typescript"
+	],
+	"license": "BSD-3-Clause",
+	"contributors": [
+		"Nat Sepruko <natsepruko@gmail.com>"
+	],
 	"scripts": {
 		"build": "tsup --config tsup.config.json"
 	},
@@ -9,14 +17,6 @@
 		"types": "./dist/index.d.ts",
 		"import": "./dist/index.mjs"
 	},
-	"keywords": [
-		"discord",
-		"typescript"
-	],
-	"contributors": [
-		"Nat Sepruko <natsepruko@gmail.com>"
-	],
-	"license": "BSD-3-Clause",
 	"devDependencies": {
 		"@types/node": "^18.14.6",
 		"@wawanakwa/conf": "workspace:^1.0.0",
