@@ -6,8 +6,8 @@
 
 - [`@wawanakwa/conf`](#wawanakwaconf)
 	- [Table of Contents](#table-of-contents)
-- [Licensing](#licensing)
+	- [Licensing](#licensing)
 
-# Licensing
+## Licensing
 
 The `@wawanakwa/conf` sub-package is licensed under the [CC0](LICENSE) license.
