@@ -1,6 +1,6 @@
 {
 	"name": "@wawanakwa/snowflake",
-	"version": "0.2.3",
+	"version": "1.0.0-next.0",
 	"description": "An implementation of the Twitter snowflake standard in TypeScript.",
 	"keywords": [
 		"snowflake",
