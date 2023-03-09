@@ -111,6 +111,11 @@ class Snowflake {
 	// @ts-ignore
 	private [Symbol.toStringTag] = this.toString;
 
+	// @ts-ignore
+	private [Symbol.toPrimitive](hint: "default" | "string" | "number"): string | number {
+		return hint == "number" ? Number(this.#inner) : this.toString();
+	}
+
 	/**
 	 * Returns the primitive value of the {@link Snowflake} instance.
 	 */
@@ -142,9 +147,6 @@ class DiscordSnowflake extends Snowflake {
 	 * Generate a new {@link DiscordSnowflake} instance, based entirely on the passed
 	 * {@link SnowflakeLike} value.
 	 *
-	 * @param epoch
-	 * The {@link EpochLike} to use as the snowflake's epoch.
-	 *
 	 * @param raw
 	 * The raw {@link SnowflakeLike} value to create the instance from.
 	 */
@@ -153,9 +155,6 @@ class DiscordSnowflake extends Snowflake {
 	/**
 	 * Generate a new {@link DiscordSnowflake} instance, optionally choosing to overwrite specific
 	 * parts of the generated snowflake.
-	 *
-	 * @param epoch
-	 * The {@link EpochLike} to use as the snowflake's epoch.
 	 *
 	 * @param [options={}]
 	 * The partial {@link DiscordSnowflake.Parts} to use as overrides on the generated snowflake.
@@ -171,6 +170,33 @@ class DiscordSnowflake extends Snowflake {
 			};
 
 		super(DiscordSnowflake.DISCORD_EPOCH, rawOrOptions as any);
+	}
+}
+
+/**
+ * An extension of {@link Snowflake} for Twitter.
+ */
+class TwitterSnowflake extends Snowflake {
+	/**
+	 * Generate a new {@link TwitterSnowflake} instance, based entirely on the passed
+	 * {@link SnowflakeLike} value.
+	 *
+	 * @param raw
+	 * The raw {@link SnowflakeLike} value to create the instance from.
+	 */
+	constructor(raw: Snowflake.SnowflakeLike);
+
+	/**
+	 * Generate a new {@link TwitterSnowflake} instance, optionally choosing to overwrite specific
+	 * parts of the generated snowflake.
+	 *
+	 * @param [options={}]
+	 * The partial {@link TwitterSnowflake.Parts} to use as overrides on the generated snowflake.
+	 */
+	constructor(options?: Partial<TwitterSnowflake.Parts>);
+
+	constructor(rawOrOptions: Snowflake.SnowflakeLike | Partial<TwitterSnowflake.Parts> = {}) {
+		super(TwitterSnowflake.TWITTER_EPOCH, rawOrOptions as any);
 	}
 }
 
@@ -227,4 +253,17 @@ namespace DiscordSnowflake {
 	export const DISCORD_EPOCH = 1420070400000n;
 }
 
-export { Snowflake as default, DiscordSnowflake };
+namespace TwitterSnowflake {
+	/**
+	 * Describes the individual parts of a Twitter snowflake.
+	 */
+	export interface Parts extends Snowflake.Parts {}
+
+	/**
+	 * The Twitter epoch, this value is automatically used when creating a {@link TwitterSnowflake}
+	 * instance.
+	 */
+	export const TWITTER_EPOCH = 1288834974657n;
+}
+
+export { Snowflake as default, DiscordSnowflake, TwitterSnowflake };

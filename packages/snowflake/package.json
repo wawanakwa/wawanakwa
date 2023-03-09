@@ -1,18 +1,26 @@
 {
 	"name": "@wawanakwa/snowflake",
-	"version": "0.1.0",
+	"version": "0.2.1",
 	"description": "An implementation of the Twitter snowflake standard in TypeScript.",
 	"license": "BSD-3-Clause",
 	"contributors": [
 		"Nat Sepruko <natsepruko@gmail.com>"
 	],
+	"repository": {
+		"url": "https://github.com/wawanakwa/wawanakwa.git",
+		"type": "git",
+		"directory": "packages/snowflake"
+	},
 	"scripts": {
 		"build": "tsup --config tsup.config.json"
 	},
+	"files": [
+		"./dist/"
+	],
 	"type": "module",
 	"exports": {
 		"types": "./dist/index.d.ts",
-		"import": "./dist/index.mjs"
+		"import": "./dist/index.js"
 	},
 	"devDependencies": {
 		"@swc/core": "^1.3.38",
