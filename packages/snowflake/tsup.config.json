@@ -1,0 +1,14 @@
+{
+	"$schema": "https://raw.githubusercontent.com/egoist/tsup/dev/schema.json",
+	"clean": true,
+	"dts": true,
+	"entry": ["./src/index.ts"],
+	"format": "esm",
+	"keepNames": true,
+	"minify": true,
+	"name": "@wawanakwa/snowflake",
+	"shims": true,
+	"splitting": false,
+	"target": "node16",
+	"tsconfig": "./tsconfig.json"
+}
