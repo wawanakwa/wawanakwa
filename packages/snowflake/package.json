@@ -1,7 +1,12 @@
 {
 	"name": "@wawanakwa/snowflake",
-	"version": "0.2.1",
+	"version": "0.2.3",
 	"description": "An implementation of the Twitter snowflake standard in TypeScript.",
+	"keywords": [
+		"snowflake",
+		"discord",
+		"twitter"
+	],
 	"license": "BSD-3-Clause",
 	"contributors": [
 		"Nat Sepruko <natsepruko@gmail.com>"
